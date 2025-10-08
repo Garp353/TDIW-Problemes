@@ -1,0 +1,59 @@
+/* Haremos un grid template para toda la página de 4*2 */
+/* Si la pagina es menos de 600px de ancho, será un flexbox */
+
+#layout{
+    display: grid;
+    grid-template-areas: 
+        "titol titol"
+        "grauList registre"
+        "stats stats"
+        "peu peu";
+    
+}
+#titol{
+    grid-area: titol;
+}
+#grauList{
+    grid-area: grauList;
+}
+#registre{
+    grid-area: registre;
+}
+#stats{
+    grid-area: stats;
+}
+#peu{
+    grid-area: peu;
+}
+
+h1{
+    color: #01008B;
+}
+h1,h3{
+    font-style: italic;
+}
+header p{
+    font-family: 'Courier New', Courier, monospace;
+}
+.fancy{
+    font-family: 'Times New Roman', Times, serif;
+}
+header.fancy{
+    color: magenta;
+}
+section.statistics header h3{
+    color: red
+}
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse
+}
+p.important{
+    font-weight: bold;
+    font-size: 30px;
+    background-color: aqua;
+}
+img{
+    float: left;
+    padding: 0 0 0 10px;
+}
