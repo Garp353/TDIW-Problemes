@@ -1,6 +1,20 @@
 /* Haremos un grid template para toda la página de 4*2 */
 /* Si la pagina es menos de 600px de ancho, será un flexbox */
 
+#uab-logo {
+  transform: rotate(0deg) scale(0);
+  animation-name: girarYAmpliar;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes girarYAmpliar {
+  to {
+    transform: rotate(360deg) scale(1); /* rota 360 grados */
+  }
+}
+
 #layout{
     display: grid;
     grid-template-areas: 
@@ -8,7 +22,10 @@
         "grauList registre"
         "stats stats"
         "peu peu";
-    
+    background-color: lightgray;
+    column-gap: 5px;
+    row-gap: 5px;
+    padding: 5px;
 }
 #titol{
     grid-area: titol;
@@ -21,9 +38,35 @@
 }
 #stats{
     grid-area: stats;
+    margin-left: auto;
+    margin-right: auto;
 }
 #peu{
     grid-area: peu;
+}
+
+.area{
+    background-color: white;
+    padding: 5px;
+    margin: 2px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+@media (max-width: 600px){
+    #layout{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    #stats{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .area{
+        text-align: left;
+    }
 }
 
 h1{
@@ -56,4 +99,7 @@ p.important{
 img{
     float: left;
     padding: 0 0 0 10px;
+}
+ul li{ /*perquè les “bullets” quedin alineades amb el text*/
+    list-style-position:inside;
 }

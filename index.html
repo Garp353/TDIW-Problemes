@@ -1,3 +1,6 @@
+<!--para conectarse es https://tdiw-a8.deic-docencia.uab.cat/problemsVF/TDIW-Problemes-->
+<!-- Para log: https://tdiw-a8.deic-docencia.uab.cat/logs/access.log-->
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -10,16 +13,15 @@
     <body>
         <div id="layout">
             <!-- SECCIÓ 1 - Capçalera -->
-            <header id="titol">
+            <header id="titol" class="area">
                 <a href="http://www.uab.cat" target="_blank">
-                    <img src="./img/uab.png" width="200" alt="UAB" />
+                    <img id="uab-logo" src="./img/uab.png" width="200" alt="UAB" />
                 </a>
                 <h1>Escola d'Enginyeria</h1>
                 <p>Benvinguts a l'Escola d'Enginyeria de la UAB</p>
-                <hr />
             </header> 
             <!-- SECCIÓ 2 - Llistat dels diferents graus que ofereix l’escola d’enginyeria -->
-            <section id="grauList">
+            <section id="grauList" class="area">
                 <h3>Graus disponibles: </h3>
                 <ul>
                     <li> 
@@ -39,7 +41,7 @@
                 </ul>
             </section>
             <!-- SECCIÓ 3 - Formulari de registre -->
-            <section id="registre">
+            <section id="registre" class="area">
                 <header class="fancy">
                     <h3>Registra't com a alumne en un grau: </h3>
                 </header>
@@ -52,28 +54,25 @@
 
                         Graus:
                         <select name="grau" id="graus" onchange="carregaMencions()">
-                            <option value="EI">Enginyeria Informàtica</option>
-                            <option value="ST">Enginyeria de Sistemes de Telecomunicació</option>
-                            <option value="ET">Enginyeria Electrònica de Telecomunicació</option>
-                            <option value="Q">Enginyeria Quimica</option>
+                            <option value="1">Enginyeria Informàtica</option>
+                            <option value="2">Enginyeria de Sistemes de Telecomunicació</option>
+                            <option value="3">Enginyeria Electrònica de Telecomunicació</option>
+                            <option value="4">Enginyeria Quimica</option>
                         </select><br />
 
                         <p>Tria la menció que t'atreu més: </p>
-                        <select name="mencio">
-                            <option value="S">Menció Enginyeria del software</option>
-                            <option value="EC">Menció Enginyeria de computadors</option>
-                            <option value="C">Menció Computació</option>
-                            <option value="I">Menció Tecnologies de la informació</option>
+                        <select name="mencions" id="mencions">
+                            <option value="S">Enginyeria del software</option>
+                            <option value="EC">Enginyeria de computadors</option>
+                            <option value="C">Computació</option>
+                            <option value="I">Tecnologies de la informació</option>
                         </select><br /><br />
-                        
                         <input type="submit" value="Registrar-me">
                     </form>
                 </div>
-                
-                <hr />
             </section>
             <!-- SECCIÓ 4 -  Estadístiques de matriculació per grau -->
-            <section class="statistics" id="stats">
+            <section class="statistics area" id="stats" >
                 <header>
                     <h3>Estadístiques de matriculació per graus</h3>
                 </header>
@@ -108,7 +107,7 @@
                 </table>
             </section>
             <!-- SECCIÓ 5 - Peu de pàgina -->
-            <footer id="peu">
+            <footer id="peu" class="area">
                 <!-- completa -->
                 <img src="img/campus-e.png" alt="Logo campus-e" width="200"/>
                 <p>©Universitat Autònoma de Barcelona. Campus d'Excel·lència</p>
